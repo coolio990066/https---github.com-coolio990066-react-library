@@ -8,6 +8,8 @@ import Home from './pages/home';
 import Books from './pages/books';
 import { books } from './data';
 import BookInfo from './pages/bookinfo';
+import Price from './components/ui/price';  
+import Rating from './components/ui/rating';  
 
 function App() {
   return (

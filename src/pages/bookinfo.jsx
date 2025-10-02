@@ -1,13 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import Price from '../components/ui/price'
+import Rating from '../components/ui/rating'
+import book from '../components/ui/book'
 
 
 
 const BookInfo = ({ books }) => {
+   
   return (
     <div id="books__body">
-        <div id="books__main">
+        <main id= 'books__main'>
+
             <div className="books__container">
                 <div className="row">
                     <div className="book__selected--top">
@@ -28,12 +33,24 @@ const BookInfo = ({ books }) => {
                             </h2>
                             </div>
                             <div className="book__selected--price">
-                                <Price />
+                                <Price originalPrice={book.originalPrice} salePrice={book.salePrice}
+                                />
                             </div>
+                            <div className="book__summary">
+                                <div className="book__summary--title">
+                                    Summary
+                                </div>
+                                <p className="book__summary--para">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                                </p>
+                            </div>
+                            <button className="btn">
+                                Add to Cart
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
   )
 }
