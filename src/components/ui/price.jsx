@@ -13,7 +13,7 @@ const Price = ({ salePrice, originalPrice }) => {
             ${salePrice}
           </>
         ) : (
-          <>${originalPrice}.00</>
+          <>${originalPrice}</>
         )}
       </div>
   );
